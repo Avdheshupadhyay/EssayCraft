@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Essay Notepad - Stylish Dark</title>
+  <title>Essay Notepad </title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -35,8 +35,30 @@
     h1 {
       text-align: center;
       color: #00ffff;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-shadow: 0 0 5px #00ffff;
+    }
+
+    .topic-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #f8faff;
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .topic-input:focus {
+      border-color: #00ffff;
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+    }
+
+    .topic-input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
     }
 
     textarea {
@@ -95,7 +117,12 @@
 <body>
   <div class="container">
     <h1>Essay Notepad</h1>
+    
+    <!-- 📝 Topic Title Input -->
+    <input type="text" id="topicInput" class="topic-input" placeholder="Enter your essay topic here...">
+
     <textarea id="essayBox" placeholder="Start writing your essay..."></textarea>
+
     <div class="stats">
       <p>📝 Word Count: <span id="wordCount">0</span></p>
       <p>⌫ Backspace Count: <span id="backspaceCount">0</span></p>
